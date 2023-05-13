@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;1,100;1,300;1,400;1,500;1,700;1,800&display=swap');
+
+body {
+    /* background-color: rgba(0 0 0 / 1) */
+    background-image: url(../../public/web/images/bursting.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% ;
+    background-attachment: fixed;
+}
+.slider-container {
+    /* background: linear-gradient(to bottom,#242424 0%,#515151 46%,#242424 100%); */
+    /* background: rgb(255,188,15); */
+    /* background-image: radial-gradient(at center center, #E9A808 72%, #261900 100%); */
+    background: transparent url(../../public/web/images/gold-frame-lg.png) no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.content-bg {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(135.46deg, #927236 3.16%, #EFBD6A 26.1%, #ECBD6A 49.04%, #FFD669 91.25%);
+    border: 4px solid #755720;
+    border-radius: 22px 22px 0 0;
+}
+.content-dots {
+    @apply flex gap-1 items-center;
+}
+.content-dots span {
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+
+    background-size: 100%;
+    background-position: center;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+.content-dots.jd1 span {
+    background: transparent url(../../public/web/images/jd1.gif) no-repeat;
+}
+.content-dots.jd2 span {
+    background: transparent url(../../public/web/images/jd2.gif) no-repeat;
+}
+.content-h1 {
+    @apply font-poppins font-bold;
+    width: 100%;
+    min-height: 53px;
+    max-width: 375px;
+    font-size: 19px;
+    border: 4px solid #755720;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 9px 10px;
+}
+.row {
+    @apply -mx-[15px] flex flex-wrap;
+}
+.container {
+    @apply mx-auto max-w-[1140px] px-[15px];
+}
+.progress {
+    background-color: #e9ecef;
+    border-radius: 25px;
+    box-shadow: none;
+}
+.progress.progress-xs {
+    height: 5px;
+    margin-top: 5px;
+}
+.progress.progress-sm {
+    background: linear-gradient(93.54deg, #755720 20.09%, #815100 41.78%, #875D1A 56.81%, #A67E36 66.13%, #815100 74.32%);
+    border: 1px solid black;
+    min-height: 24px;
+    margin-top: 5px;
+    border-radius: 25px;
+    padding: 3px 4px;
+}
+.progress.progress-sm:before {
+    content: '';
+    position: absolute;
+    z-index: 9;
+    left: 4px;
+    right: 4px;
+    top: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 25px;
+
+}
+.progress.progress-sm .progress-bar {
+    position: relative;
+    z-index: 10;
+    height: 16px;
+
+}
+.progress.progress-lg {
+    height: 30px;
+}
+.progress.vertical {
+    position: relative;
+    width: 20px;
+    height: 200px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.progress.vertical > .progress-bar {
+    width: 100% !important;
+    position: absolute;
+    bottom: 0;
+}
+.progress.vertical.progress-xs {
+    width: 5px;
+    margin-top: 5px;
+}
+.progress.vertical.progress-sm {
+    width: 10px;
+    margin-top: 5px;
+}
+.progress.vertical.progress-lg {
+     width: 30px;
+}
+.progress-bar {
+    background-color: #2196f3;
+    box-shadow: none;
+    height: 30px;
+    position: relative;
+    border-radius: 25px;
+}
+.progress-bar.text-left {
+    text-align: left;
+}
+.progress-bar.text-left span {
+    margin-left: 10px;
+}
+.progress-bar.text-right {
+    text-align: right;
+}
+.progress-bar.text-right span {
+    margin-right: 10px;
+}
+@-webkit-keyframes progress-bar-stripes {
+    from {
+        background-position: 40px 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 40px 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
+.progress.active .progress-bar:after, .progress-bar.active:after {
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    -o-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 25px;
+}
+.progress-striped .progress-bar:after, .progress-bar-striped:after {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 20px 20px;
+    position: relative;
+}
+/* .progress-striped .progress-bar:before, .progress-bar-striped:before {
+    content: '';
+    z-index: 8;
+    position: absolute;
+    border-radius: 25px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+} */
+.progress-bar-secondary {
+    background-color: #323a45;
+}
+.progress-bar-default {
+    background-color: #b0bec5;
+}
+.progress-bar-success {
+    /* background-color: #28a745; */
+    background-image: linear-gradient(177.23deg, #5AFF20 5.47%, #3B9B00 87.27%);
+}
+.progress-bar-info {
+    background-image: #29b6f6;
+}
+.progress-bar-warning {
+    /* background-color: #ffc107; */
+    background-image: linear-gradient(177.23deg, #FFB800 5.47%, #ED9500 87.27%);
+}
+.progress-bar-danger {
+    /* background-color: #ef1c1c; */
+    background-image: linear-gradient(177.23deg, #FE5858 5.47%, #FF4444 87.27%);
+}
+.btn-gold {
+    @apply btn font-poppins;
+    border-radius: 30px;
+    border-color: transparent;
+    background: url(../../public/web/images/btn-gold-lg.png);
+    background-size: 105% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 56px;
+    max-width: 318px;
+    color: black;
+}
+.btn-silver {
+    @apply btn font-poppins;
+    border-radius: 30px;
+    border-color: transparent;
+    background: url(../../public/web/images/btn-silver-lg.png);
+    background-size: 105% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 56px;
+    max-width: 318px;
+    color: black;
+}
+.btn-gold:hover,
+.btn-silver:hover {
+    filter: brightness(120%);
+    background-color: transparent;
+    border-color: transparent;
+}
+.word h1,.word h2,.word h3 {
+    @apply font-poppins text-[16px] font-bold leading-[24px];
+}
+.word p {
+    @apply text-[12px];
+}
+@media (max-width: 767px) {
+    body {
+        background-size: cover;
+    }
+    .slider-container {
+        background: transparent url(../../public/web/images/gold-frame-sm.png) no-repeat;
+        background-position: center;
+        background-size: 100%;
+    }
+    .btn-gold {
+        background: url(../../public/web/images/btn-gold-sm.png) no-repeat;
+        background-size: 100% 100%;
+        height: 54px;
+        flex: 100%;
+    }
+    .btn-silver {
+        background: url(../../public/web/images/btn-silver-sm.png) no-repeat;
+        background-size: 100% 100%;
+        height: 54px;
+        flex: 100%;
+
+    }
+
+}
