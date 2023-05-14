@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
+    <meta description="OKEPLAY777 Situs Judi Slot Online Dengan RTP Tertinggi Terlengkap Dan Terpercaya Di Indonesia Infini88 Memberikan Rekomendasi Slot Gacor Hari Ini 2023">
+    <title>OKEPLAY777 | SITUS JUDI SLOT ONLINE DENGAN RTP TERTINGGI</title>
     <link rel="shortcut icon" href="{{ asset('web/images/okeplaylogo7777.gif')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('web/css/app.css')}}">
 </head>
